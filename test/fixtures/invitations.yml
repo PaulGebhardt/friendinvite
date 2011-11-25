@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  invitee_id: 1
+  inviter_id: 1
+  invited_at: 2011-11-14 16:18:56
+
+two:
+  invitee_id: 1
+  inviter_id: 1
+  invited_at: 2011-11-14 16:18:56

@@ -1,0 +1,25 @@
+<%= form_for(@overview) do |f| %>
+  <% if @overview.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@overview.errors.count, "error") %> prohibited this overview from being saved:</h2>
+
+      <ul>
+      <% @overview.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :invitee_id %><br />
+    <%= f.number_field :invitee_id %>
+  </div>
+  <div class="field">
+    <%= f.label :inviter_id %><br />
+    <%= f.number_field :inviter_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  facebookid: 1
+  invites: 1
+
+two:
+  facebookid: 1
+  invites: 1

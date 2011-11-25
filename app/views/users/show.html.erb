@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Facebookid:</b>
+  <%= @user.facebookid %>
+</p>
+
+<p>
+  <b>Invites:</b>
+  <%= @user.invites %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
+
+
+<% if @friendinvites && @friendinvites < 5  %>
+	<p> Du hast Einladungen verfügbar </p>
+		<%= render :partial => "layouts/friend_invite" %>
+
+	<%  else %>
+		<p> Du hast KEINE Einladungen verfügbar </p>
+
+<% end %>

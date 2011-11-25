@@ -1,0 +1,25 @@
+<h1>Listing overviews</h1>
+
+<table>
+  <tr>
+    <th>Invitee</th>
+    <th>Inviter</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @overviews.each do |overview| %>
+  <tr>
+    <td><%= overview.invitee_id %></td>
+    <td><%= overview.inviter_id %></td>
+    <td><%= link_to 'Show', overview %></td>
+    <td><%= link_to 'Edit', edit_overview_path(overview) %></td>
+    <td><%= link_to 'Destroy', overview, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Overview', new_overview_path %>
